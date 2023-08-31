@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.build.json",
+  "compilerOptions": {
+    "noEmit": true
+  },
+  "include": ["src", "src/**/*.test.ts", "test", "jest.config.cjs", ".eslintrc.cjs", "test/test-setup.ts", "**/*.ts"],
+  "exclude": ["node_modules"],
+  "ts-node": { "files": true }
+}

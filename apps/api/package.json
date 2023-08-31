@@ -1,0 +1,30 @@
+{
+  "name": "@graphclient-demo/api",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "./dist/server.js",
+  "exports": {
+    "default": "./dist/server.js"
+  },
+  "scripts": {
+    "build": "rm -rf dist && yarn tsc -P ./tsconfig.build.json",
+    "build:api": "yarn tsc -P ./tsconfig.build.json",
+    "start": "node .",
+    "dev": "nodemon --watch ../. --ext ts --exec node --no-warnings --loader ts-node/esm --inspect src/server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fastify": "^4.22.0",
+    "graphql": "^16.8.0",
+    "graphql-yoga": "^4.0.4"
+  },
+  "devDependencies": {
+    "@types/node": "20.5.7",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1",
+    "typescript": "5.2.2"
+  }
+}
