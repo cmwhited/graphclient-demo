@@ -1,0 +1,19 @@
+sources:
+  - name: Network
+    handler:
+      graphql:
+        endpoint: https://api.thegraph.com/subgraphs/name/graphprotocol/graph-network-mainnet
+        retry: 3
+    transforms:
+      - prefix:
+          value: NETWORK__
+          includeRootOperations: true
+  - name: LivePeer
+    handler:
+      graphql:
+        endpoint: https://api.thegraph.com/subgraphs/name/livepeer/livepeer
+        retry: 3
+    transforms:
+      - prefix:
+          value: LIVEPEER__
+          includeRootOperations: true
